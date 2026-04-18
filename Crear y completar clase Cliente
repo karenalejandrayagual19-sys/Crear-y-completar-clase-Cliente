@@ -1,0 +1,28 @@
+class Cliente:
+    def _init_(self, nombre: str, apellido: str, genero: str, ocupacion: str):
+        # 1. Encapsulamiento (Atributos con guion bajo _)
+        self._nombre = nombre
+        self._apellido = apellido
+        self._genero = genero
+        self._ocupacion = ocupacion
+
+    # 2. Métodos Especiales con DOBLE guion bajo (_str_)
+    def _str_(self):
+        # Usamos \n para que cada dato salga en una línea nueva
+        return (f"DATOS DEL CLIENTE:\n"
+                f"Nombre: {self._nombre}\n"
+                f"Apellido: {self._apellido}\n"
+                f"Género: {self._genero}\n"
+                f"Ocupación: {self._ocupacion}")
+
+# 3. Punto de entrada con DOBLE guion bajo (_name_ y _main_)
+if _name_ == '_main_':
+    cliente1 = Cliente(
+        nombre="Maria", 
+        apellido="Paz", 
+        genero="Femenino", 
+        ocupacion="Ingeniera"
+    )
+
+    # Imprimimos el objeto
+    print(cliente1)
